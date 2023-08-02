@@ -16,6 +16,13 @@ export const Form = () => {
     const [ companylogo, setCompanyLogo ] = useState();
     const [ businesstype, setBusinessType ] = useState();
 
+    const handleSave = (e) => {
+        e.preventDefault();
+        const customer = { companyname, address1, address2, address3, city, district, hotline, smsnumber, email, facebook, twitter, linkedin, companylogo, businesstype };
+
+        console.log(customer);
+    }
+
     return (
         <div className="regform">
             <h2>Easy Alert</h2>
@@ -55,8 +62,9 @@ export const Form = () => {
                     <input type="file" required value={companylogo} onChange={(e) => setCompanyLogo(e.target.value)} />
                 <label>Business Type</label>
                     <input type="text" required value={businesstype} onChange={(e) => setBusinessType(e.target.value)}/>
-                    <button type="submit" >Cancel</button>
-                <button type="submit" >Save</button>
+                
+                <button type="submit" >Cancel</button>
+                <button type="submit" onClick={handleSave} >Save</button>
                 
             </form>
            
