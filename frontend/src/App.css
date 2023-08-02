@@ -50,26 +50,35 @@
   border-radius: 5px;
   padding: 8px;
 }
+
+/*.formContainer {
+  background-color: #fff;;
+}*/
+
 .regform {
   max-width: 1000px;
+  background-color: lightblue;
   margin: 0 auto; 
   box-sizing: border-box;
-  border: 1px solid white;
+  /*border: 1px solid white;*/
   padding: 50px;
   text-align: center;
 }
 
 .regform h2 {
   color: #0056a2;
+  background-color: lightblue;
   text-align: center;
 }
 
 .regform h4 {
-  color: white;
+  color: #0056a2;
+  background-color: lightblue;
   text-align: left;
 }
 
 .regform label{
+  background-color: lightblue;
   font-weight: bold;
   color: #0056a2;
   text-align: left;
@@ -80,10 +89,11 @@
   width: 75%;
   padding: 6px 10px;
   margin: 10px 0;
-  border: 1px solid #ddd;
+  border: 1px solid #0056a2;
   box-sizing: border-box;
   display: block;
-  color: white;
+  color: #0056a2;
+  background-color: lightblue;
 }
 
 .regform button {

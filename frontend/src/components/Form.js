@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Container } from "react-bootstrap";
 
 
 export const Form = () => {
@@ -43,21 +44,31 @@ export const Form = () => {
 
     }
 
-    const handleCancel = (e) => {
-        e.preventDefault();
-        const customer = { companyname, address1, address2, address3, city, district, hotline, smsnumber, email, facebook, twitter, linkedin, companylogo, businesstype };
-
-        console.log(customer);
-
+    const handleCancel = () => {
+        setCompanyName("");
+        setAddress1("");
+        setAddress2("");
+        setAddress3("");
+        setCity("");
+        setDistrict("");
+        setHotline("");
+        setSmsNumber("");
+        setEmail("");
+        setFacebook("");
+        setTwitter("");
+        setLinkedin("");
+        setCompanyLogo("");
+        setBusinessType("");
     }
 
     return (
-        <div className="regform">
+        <Container className="formContainer">
+            <div className="regform">
             <h2>Easy Alert</h2>
             <h4>Registration</h4>
 
            
-            <form>
+            <form style={{ backgroundColor: 'lightblue' }}>
                 <label>Company Name</label>
                     <input type="text" required value={companyname} onChange={(e) => setCompanyName(e.target.value)} />
                 <label>Address1</label>
@@ -91,12 +102,11 @@ export const Form = () => {
                 <label>Business Type</label>
                     <input type="text" required value={businesstype} onChange={(e) => setBusinessType(e.target.value)}/>
                 
-                <button type="submit" onClick={handleCancel}>Cancel</button>
+                <button type="reset" onClick={handleCancel}>Cancel</button>
                 <button type="submit" onClick={handleSave} >Save</button>
             </form>
-           
-           
         </div>
+        </Container>
     )
 }
 
