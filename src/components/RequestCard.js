@@ -3,8 +3,6 @@ import { Route, Routes, useNavigate } from 'react-router-dom';
 
 
 export const RequestCard = () => {
-    
-
     return (
         <div className="reqcard">
            <h2>Approval for Pre-Overtime Requests</h2>  

@@ -8,15 +8,12 @@ export const Footer = () => {
     return(
         <Container>
             <div className="footer">
-                <FontAwesomeIcon icon={faMapMarkerAlt}></FontAwesomeIcon>
-                <p>No. 17, H. K. Dharmadasa Mawatha, Colombo 02</p>
-                <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
-                <p><a href="mailto:info@sltds.lk">info@sltds.lk</a></p>
+                <p><FontAwesomeIcon icon={faMapMarkerAlt}></FontAwesomeIcon> No. 17, H. K. Dharmadasa Mawatha, Colombo 02</p>
+                <p><FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon> <a href="mailto:info@sltds.lk">info@sltds.lk</a></p>
 
             </div>
         <div className="contact">
-            <FontAwesomeIcon icon={faPhone}></FontAwesomeIcon>
-            <p>0112-399-399</p>
+            <p><FontAwesomeIcon icon={faPhone}></FontAwesomeIcon> 0112 - 399 - 399</p>
         </div>
         </Container>
     )

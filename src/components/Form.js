@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+
 export const Form = () => {
     const [ companyname, setCompanyName ] = useState();
     const [ address1, setAddress1 ] = useState();
@@ -17,6 +18,14 @@ export const Form = () => {
     const [ businesstype, setBusinessType ] = useState();
 
     const handleSave = (e) => {
+        e.preventDefault();
+        const customer = { companyname, address1, address2, address3, city, district, hotline, smsnumber, email, facebook, twitter, linkedin, companylogo, businesstype };
+
+        //console.log(customer);
+
+    }
+
+    const handleCancel = (e) => {
         e.preventDefault();
         const customer = { companyname, address1, address2, address3, city, district, hotline, smsnumber, email, facebook, twitter, linkedin, companylogo, businesstype };
 
@@ -63,9 +72,8 @@ export const Form = () => {
                 <label>Business Type</label>
                     <input type="text" required value={businesstype} onChange={(e) => setBusinessType(e.target.value)}/>
                 
-                <button type="submit" >Cancel</button>
+                <button type="submit" onClick={handleCancel}>Cancel</button>
                 <button type="submit" onClick={handleSave} >Save</button>
-                
             </form>
            
            

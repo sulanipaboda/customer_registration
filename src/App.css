@@ -89,6 +89,7 @@
 .regform button {
   background: #0056a2;
   font-weight: bold;
+  font-size: 2px;
   color: #fff;
   border: 0;
   padding: 8px;
@@ -106,8 +107,12 @@
   text-align: center;
 }
 
+.footer icon {
+  text-align: center;
+}
+
 .contact p {
   text-align: center;
-  font-size: 50px;
+  font-size: 40px;
   color: #0056a2;
 }
