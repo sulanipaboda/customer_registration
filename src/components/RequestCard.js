@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes, useNavigate } from 'react-router-dom';
+import { Route, Routes, useNavigate, Link } from 'react-router-dom';
 
 
 export const RequestCard = () => {
@@ -7,7 +7,9 @@ export const RequestCard = () => {
         <div className="reqcard">
            <h2>Approval for Pre-Overtime Requests</h2>  
            <p>Please Login to the Intranet and Approve pending Requests</p>   
-           <button>Proceed</button>
+           <Link to="/form">
+                <button>Proceed</button>
+           </Link>
         </div>
     )
 
