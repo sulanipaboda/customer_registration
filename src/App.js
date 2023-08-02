@@ -11,10 +11,11 @@ function App() {
     <div className="App">
       <NavBar />
       <RequestCard />
+      <Form />
       <ImgMarquee />
       <Footer />
     </div>
-  );
+  )
 }
 
 export default App;

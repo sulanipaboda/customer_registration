@@ -1,3 +1,70 @@
+import { useState } from "react";
+
+export const Form = () => {
+    const [ companyname, setCompanyName ] = useState();
+    const [ address1, setAddress1 ] = useState();
+    const [ address2, setAddress2 ] = useState();
+    const [ address3, setAddress3 ] = useState();
+    const [ city, setCity ] = useState();
+    const [ district, setDistrict ] = useState();
+    const [ hotline, setHotline ] = useState();
+    const [ smsnumber, setSmsNumber ] = useState();
+    const [ email, setEmail ] = useState();
+    const [ facebook, setFacebook ] = useState();
+    const [ twitter, setTwitter ] = useState();
+    const [ linkedin, setLinkedin ] = useState();
+    const [ companylogo, setCompanyLogo ] = useState();
+    const [ businesstype, setBusinessType ] = useState();
+
+    return (
+        <div className="regform">
+            <h2>Easy Alert</h2>
+            <h4>Registration</h4>
+
+           
+            <form>
+                <label>Company Name</label>
+                    <input type="text" required value={companyname} onChange={(e) => setCompanyName(e.target.value)} />
+                <label>Address1</label>
+                    <input type="text" required value={address1} onChange={(e) => setAddress1(e.target.value)} />
+                <label>Address2</label>
+                    <input type="text" required value={address2} onChange={(e) => setAddress2(e.target.value)} />
+                <label>Address3</label>
+                    <input type="text" required value={address3} onChange={(e) => setAddress3(e.target.value)} />
+                <label>City</label>
+                    <input type="text" required value={city} onChange={(e) => setCity(e.target.value)} />
+                <label>District</label>
+                    <select required value={district} onChange={(e) => setDistrict(e.target.value)}>
+                        {districts.map(dis=> {
+                            return (<option key={dis.value} value={dis.value}> {dis.text} </option> );
+                        })}
+                    </select>
+                <label>Hotline</label>
+                    <input type="text" required value={hotline} onChange={(e) => setHotline(e.target.value)} />
+                <label>SMS Number</label>
+                    <input type="text" required value={smsnumber} onChange={(e) => setSmsNumber(e.target.value)} />
+                <label>Email</label>
+                    <input type="email" required value={email} onChange={(e) => setEmail(e.target.value)} />   
+                <label>Facebook</label>
+                    <input type="text" value={facebook} onChange={(e) => setFacebook(e.target.value)} />
+                <label>Twitter</label>
+                    <input type="text" value={twitter} onChange={(e) => setTwitter(e.target.value)} />
+                <label>Linkedin</label>
+                    <input type="text" value={linkedin} onChange={(e) => setLinkedin(e.target.value)} />
+                <label>Company Logo</label>
+                    <input type="file" required value={companylogo} onChange={(e) => setCompanyLogo(e.target.value)} />
+                <label>Business Type</label>
+                    <input type="text" required value={businesstype} onChange={(e) => setBusinessType(e.target.value)}/>
+                    <button type="submit" >Cancel</button>
+                <button type="submit" >Save</button>
+                
+            </form>
+           
+           
+        </div>
+    )
+}
+
 const districts = [
     {value: 'Ampara', text: 'Ampara'},
     {value: 'Anuradhapura', text: 'Anuradhapura'},
@@ -25,54 +92,5 @@ const districts = [
     {value: 'Trincomalee', text: 'Trincomalee'},
     {value: 'Vavuniya', text: 'Vavuniya'},
 ];
-
-export const Form = () => {
-    return (
-        <div className="regform">
-            <h2>Easy Alert</h2>
-            <h4>Registration</h4>
-
-           
-            <form>
-                <label>Company Name</label>
-                    <input type="text" required />
-                <label>Address1</label>
-                    <input type="text" required />
-                <label>Address2</label>
-                    <input type="text" required/>
-                <label>Address3</label>
-                    <input type="text" required />
-                <label>City</label>
-                    <input type="text" required />
-                <label>District</label>
-                    <select value="Ampara">
-                        {districts.map(dis=> {
-                            return (<option key={dis.value} value={dis.value}> {dis.text} </option> );
-                        })}
-                    </select>
-                <label>Hotline</label>
-                    <input type="text" required />
-                <label>SMS Number</label>
-                    <input type="text" required />
-                <label>Email</label>
-                    <input type="email" required />   
-                <label>Facebook</label>
-                    <input type="text"  />
-                <label>Twitter</label>
-                    <input type="text"  />
-                <label>Linkedin</label>
-                    <input type="text" />
-                <label>Company Logo</label>
-                    <input type="file" required />
-                <label>Business Type</label>
-                    <input type="text" required />
-                    <button type="submit" >Cancel</button>
-                <button type="submit" >Save</button>
-            </form>
-           
-           
-        </div>
-    )
-}
 
 export default Form;
