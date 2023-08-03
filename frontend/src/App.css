@@ -6,6 +6,10 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+@media screen and (max-width: 768px) {
+  
+}
+
 .navbar h1, .navbar h3{
   color: white;
 }
@@ -28,6 +32,11 @@
   justify-content: center;
   line-height: 1;
   border: 1px solid #FFFFFF7F;
+} 
+
+.circle-icon svg {
+  width: 20px;
+  height: 20px;
 }
 
 .reqcard{
@@ -49,18 +58,26 @@
   border: 0;
   border-radius: 5px;
   padding: 8px;
+  outline: none;
 }
 
-/*.formContainer {
-  background-color: #fff;;
-}*/
+.reqcard button:hover {
+  background-color: lightblue;
+}
+
+.reqcard button:active {
+  background-color: #50b748;
+}
+.btnlink {
+  outline: none;
+}
 
 .regform {
   max-width: 1000px;
   background-color: lightblue;
   margin: 0 auto; 
   box-sizing: border-box;
-  /*border: 1px solid white;*/
+  border-radius: 25px;
   padding: 50px;
   text-align: center;
 }
@@ -77,6 +94,13 @@
   text-align: left;
 }
 
+.regform img {
+  width: 350px;
+  height: 250px;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+}
+
 .regform label{
   background-color: lightblue;
   font-weight: bold;
@@ -86,10 +110,11 @@
 }
 
 .regform input, .regform select {
-  width: 75%;
+  width: 90%;
   padding: 6px 10px;
   margin: 10px 0;
-  border: 1px solid #0056a2;
+  border: 2px solid #0056a2;
+  border-radius: 5px;
   box-sizing: border-box;
   display: block;
   color: #0056a2;

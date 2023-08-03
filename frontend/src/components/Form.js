@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Container } from "react-bootstrap";
+import reg from "../assets/reg.avif";
 
 
 export const Form = () => {
@@ -66,8 +67,8 @@ export const Form = () => {
             <div className="regform">
             <h2>Easy Alert</h2>
             <h4>Registration</h4>
+            <img src= { reg } alt ="" />
 
-           
             <form style={{ backgroundColor: 'lightblue' }}>
                 <label>Company Name</label>
                     <input type="text" required value={companyname} onChange={(e) => setCompanyName(e.target.value)} />

@@ -1,5 +1,4 @@
 import Marquee from 'react-fast-marquee';
-//import { Container } from 'react-bootstrap';
 import m1 from '../assets/marquee1.jpeg'
 import m2 from '../assets/marquee2.jpeg'
 import m3 from '../assets/marquee3.jpeg'

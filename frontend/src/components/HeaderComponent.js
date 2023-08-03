@@ -6,11 +6,9 @@ import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-export const NavBar = () => {
-   // useEffect(() => )
+export const HeaderComponent = () => {
 
    return (
-    
         <div className="navbar">
             <img src={logo} alt="logo" />
             <h1>SLT Digital Services</h1>
