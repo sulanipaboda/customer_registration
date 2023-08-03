@@ -132,6 +132,11 @@
   cursor: pointer;
 }
 
+.success-msg p{
+  font-weight: bold;
+  color: #0056a2;
+}
+
 .imgmarquee img {
   width: 300px;
   height: 250px;

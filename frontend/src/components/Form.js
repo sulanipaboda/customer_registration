@@ -18,7 +18,7 @@ export const Form = () => {
     const [ linkedin, setLinkedin ] = useState();
     const [ companylogo, setCompanyLogo ] = useState();
     const [ businesstype, setBusinessType ] = useState();
-
+    const [ successMsg, setSuccessMsg ] = useState();
    
 
     const handleSave = (e) => {
@@ -41,7 +41,12 @@ export const Form = () => {
         .then((res) => res.json())
         .then((data) => {
             console.log(data, "customerRegister");
-        })
+        });
+
+        setTimeout(() => {
+            console.log("Registered successfully");
+            setSuccessMsg(true);
+          }, 2000);
 
     }
 
@@ -106,6 +111,13 @@ export const Form = () => {
                 <button type="reset" onClick={handleCancel}>Cancel</button>
                 <button type="submit" onClick={handleSave} >Save</button>
             </form>
+            
+            {successMsg && (
+                <div className="success-msg">
+                    <p>Data submitted successfully!</p>
+                </div>
+            )}
+
         </div>
         </Container>
     )
