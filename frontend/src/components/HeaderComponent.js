@@ -15,15 +15,16 @@ export const HeaderComponent = () => {
             <h3>INTRANET</h3>
 
             <div className="icon-container">
-                <div className="circle-icon">
-                <FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon>
-                </div>
-                <div className="circle-icon">
-                <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>
-                </div>
-                <div className="circle-icon">
-                <FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon>
-                </div> 
+                <a href="https://www.facebook.com/SLTDigitalServices" target="_blank" rel="noopener noreferrer" className="circle-icon">
+                    <FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon>
+                </a>
+                    
+                <a href="https://twitter.com/rainbowpageslk" target="_blank" rel="noopener noreferrer" className="circle-icon">
+                    <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>
+                </a>
+                <a href="https://www.linkedin.com/company/sltdigitalservices/" target="_blank" rel="noopener noreferrer" className="circle-icon">
+                    <FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon>
+                </a> 
             </div>
         </div>
    )
